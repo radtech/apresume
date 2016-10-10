@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css.map" rel="stylesheet">
+        <script>// Code goes here
+            var i = 20;
+
+            var counterBack = setInterval(function(){
+            i++;
+                if(i<100)
+                {
+                    $('.progress-bar').css('width', i+'%');
+                    //document.getElementById("bar").innerHTML="hi" 
+                } 
+                else if(i>90)
+                {
+                    clearTimeout(counterBack);
+                    window.location.href = "resume.html";
+                }
+  
+            }, 100);</script>
+    </head>
+    <body>
+
+        <div class="progress" style="position:relative;  width: 50%; z-index:75; top:50%; left:35%; margin: -100px 0 0 -150px;">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0"aria-valuemax="100" style="width: 20%;">
+                    <span id="bar" class="sr-only"></span>
+
+            </div>
+        </div>
+        
+        <script src =  "jquery-2.1.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
